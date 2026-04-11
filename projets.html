@@ -3,126 +3,136 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Mon Portfoflio</title>
-    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-<link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">">
+   <title>Mes Projets - Mon Portfoflio</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
    <header>
       <div>
-         <a href="">Mon Portfoflio</a>
+         <a href="index.html">Mon Portfoflio</a>
       </div>
       <nav>
          <ul>
             <li><a href="index.html">acceuil</a></li>
-            <li><a href="projets.html"class = "active">Projets</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
             <li><a href="passions.html">Passions</a></li>
             <li><a href="divertissement.html">Divertissement</a></li>
             <li><a href="contact.html">Contact</a></li>
          </ul>
       </nav>
    </header>
-   <main>Mes projets</main>
-   <section>
-      <h2> Mes Realisation</h2>
-    <article>
-      <img src="image/adobestock_223290240-.jpg" alt="E-commerce" width="300">
-      <h3>site E-commerce</h3>
-      <p>une boutique en ligne complète develo ppée avec HTML,CSS et JavaScript pur.</p>
-      <div>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JS</span>
-      </div>
-     <div>
-         <a href="">Code</a>
-         <a href="">Démo</a>
-     </div>
-    </article>
 
-      <article>
-         <img src="image/student-hands-filling-out-form-document-home-close-up-girl-sitting-desk-178966545.jpg" alt="Gestionnaire de taches" width="300">
-         <h2>Gestionnaire de taches</h2>
-      <p>application pour organiser ses projets quotidiens avec stockage local.</p>
-      <div>
-         <a href="">python</a>
-      <a href="">flask</a>
-      </div>
-      <div>
-      <a href="">Code</a>
-      <a href="">Démo</a>
-      </div>
-      </article>
+   <main>
+      <section class="projets-section container">
+         <h2>Mes Réalisations</h2>
+         
+         <div class="projets-grid">
+            <article class="projet-card">
+               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop" alt="Site E-commerce">
+               <div class="projet-info">
+                  <h3>Site E-commerce</h3>
+                  <p>Une boutique en ligne complète développée avec HTML, CSS et JavaScript pur.</p>
+                  <div class="projet-tags">
+                     <span>HTML</span><span>CSS</span><span>JS</span>
+                  </div>
+                  <div class="projet-links">
+                     <a href="#"><i class="fa-solid fa-code"></i> Code</a>
+                     <a href="#"><i class="fa-solid fa-link"></i> Démo</a>
+                  </div>
+               </div>
+            </article>
 
-      <article>
-      <img src="image/Guide-dAchat-2025-Comment-Choisir-le-Meilleur-PC-Portable-au-Maroc-selon-Votre-Profil-1.png" alt="Blog Personnel" width="300">
-      <h3>Blog Personnel</h3>
-      <p>projet en cours de migration vers laraval pour apprendre le backend</p>
-      <div>
-         <span>PHP</span>
-         <span>laraval</span>
-      </div>
-      <div>
-            <a href="">Code</a>
-            <a href="">Démo</a>
-      </div>
-     </article>
+            <article class="projet-card">
+               <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=600&auto=format&fit=crop" alt="Gestionnaire de Tâches">
+               <div class="projet-info">
+                  <h3>Gestionnaire de Tâches</h3>
+                  <p>Application web pour organiser ses projets quotidiens avec stockage local.</p>
+                  <div class="projet-tags">
+                     <span>Python</span><span>Flask</span>
+                  </div>
+                  <div class="projet-links">
+                     <a href="#"><i class="fa-solid fa-code"></i> Code</a>
+                     <a href="#"><i class="fa-solid fa-link"></i> Démo</a>
+                  </div>
+               </div>
+            </article>
 
-     <article>
-      <img src="image/widget-google-meteo.jpg" alt="Aplicatin Metéo" width="300">
-      <h3>Aplicatin Metéo</h3>
-      <p>une application utilisant une API en temps reél pour afficher la Metéo mondiale</p>
-      <div>
-         <span>JavaScript</span>
-         <span>API</span>
-      </div>
-      <div>
-         <a href="">code</a>
-         <a href="">Démo</a>
-      </div>
-     </article>
+            <article class="projet-card">
+               <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600&auto=format&fit=crop" alt="Blog Personnel">
+               <div class="projet-info">
+                  <h3>Blog Personnel</h3>
+                  <p>Projet en cours de migration vers Laravel pour apprendre le backend.</p>
+                  <div class="projet-tags">
+                     <span>PHP</span><span>Laravel</span>
+                  </div>
+                  <div class="projet-links">
+                     <a href="#"><i class="fa-solid fa-code"></i> Code</a>
+                     <a href="#"><i class="fa-solid fa-clock"></i> Bientôt</a>
+                  </div>
+               </div>
+            </article>
 
-     <article>
-      <img src="image/montrer-rapport-financier-et-des-affaires-service-comptabilite(0).jpg" alt="Dashboard d'analyse" width="300">
-      <h3>Dashboard d'analyse</h3>
-      <p>visualisation de données dynamiques avec python et la bibliotheque Matplotlib.</p>
-      <div>
-         <span> python</span>
-         <span>data</span>
-      </div>
-      <div>
-         <a href="">code</a>
-         <a href="">Démo</a>
-      </div>
-     </article>
+            <article class="projet-card">
+               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="Dashboard">
+               <div class="projet-info">
+                  <h3>Dashboard d'Analyse</h3>
+                  <p>Visualisation de données dynamiques avec Python et la bibliothèque Matplotlib.</p>
+                  <div class="projet-tags">
+                     <span>Python</span><span>Data</span>
+                  </div>
+                  <div class="projet-links">
+                     <a href="#"><i class="fa-solid fa-code"></i> Code</a>
+                     <a href="#"><i class="fa-solid fa-link"></i> Démo</a>
+                  </div>
+               </div>
+            </article>
 
-     <article>
-      <img src="image/theme-du-modele-application-music-player_23-2148511706.jpg" alt="Maquette Mobile UI" width="300">
-      <h3>Maquette Mobile UI</h3>
-      <p>connception d'une interface utilisateur moderne pour une application de fitness.</p>
-      <div>
-         <span>Figma</span>
-         <span>Design</span>
-      </div>
-      <div>
-         <a href="">code</a>
-         <a href="">Démo</a>
-      </div>
-     </article>
+            <article class="projet-card">
+               <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=600&auto=format&fit=crop" alt="Météo">
+               <div class="projet-info">
+                  <h3>Application Météo</h3>
+                  <p>Une application utilisant une API en temps réel pour afficher la météo mondiale.</p>
+                  <div class="projet-tags">
+                     <span>JavaScript</span><span>API</span>
+                  </div>
+                  <div class="projet-links">
+                     <a href="#"><i class="fa-solid fa-code"></i> Code</a>
+                     <a href="#"><i class="fa-solid fa-link"></i> Démo</a>
+                  </div>
+               </div>
+            </article>
+
+            <article class="projet-card">
+               <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=600&auto=format&fit=crop" alt="UI Design">
+               <div class="projet-info">
+                  <h3>Maquette Mobile UI</h3>
+                  <p>Conception d'une interface utilisateur moderne pour une application de fitness.</p>
+                  <div class="projet-tags">
+                     <span>Figma</span><span>Design</span>
+                  </div>
+                  <div class="projet-links">
+                     <a href="#"><i class="fa-brands fa-figma"></i> Design</a>
+                     <a href="#"><i class="fa-solid fa-eye"></i> Aperçu</a>
+                  </div>
+               </div>
+            </article>
+         </div>
+      </section>
+   </main>
+
    <footer>
       <h6>
-      <p>2026 Destin.Tous droits résercés.</p>
+      <p>2026 Destin. Tous droits réservés.</p>
       </h6>
       <div>
          <i class="fa-brands fa-github"></i>
          <i class="fa-brands fa-linkedin"></i>
          <i class="fa-brands fa-x-twitter"></i>
       </div>
-
    </footer>
 </body>
 </html>

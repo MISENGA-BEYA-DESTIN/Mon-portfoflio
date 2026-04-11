@@ -198,124 +198,396 @@ footer i:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
-/* --- Styles spécifiques à la page Contact --- */
 
-.contact-section {
-    max-width: 1000px;
-    margin: 6rem auto;
+/* --- STYLE PAGE PASSIONS --- */
+
+.passions-section {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 0 2rem;
 }
 
-.contact-container {
-    display: flex;
-    gap: 4rem;
-    margin-top: 3rem;
-    align-items: flex-start;
+.passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
 }
 
-.contact-form {
-    flex: 1;
-    background: white;
+.passion-card {
+    background-color: white;
     padding: 2.5rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid transparent;
 }
 
-.form-group {
+.passion-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--violet-doux);
+}
+
+.passion-header {
     margin-bottom: 1.5rem;
 }
 
-.form-group label {
+.passion-header i {
+    font-size: 2.5rem;
+    color: var(--violet-doux);
+    margin-bottom: 1rem;
     display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--gris-tres-fonce);
 }
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid var(--gris-claire);
-    border-radius: 8px;
-    font-family: inherit;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: var(--violet-doux);
-}
-
-.btn-contact {
-    width: 100%;
-    background-color: var(--violet-doux);
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-contact:hover {
-    background-color: var(--violet-fronce);
-    transform: translateY(-2px);
-}
-
-.contact-details {
-    flex: 0.8;
-}
-
-.contact-details h3 {
+.passion-card h3 {
     color: var(--violet-doux);
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
-.contact-details p {
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
+.passion-card p {
     color: var(--gris-fonce);
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
-.contact-details i {
-    color: var(--violet-doux);
-    margin-right: 12px;
+/* On garde la cohérence avec le titre de l'index */
+.passions-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+/* --- STYLE PAGE DIVERTISSEMENT --- */
+
+.divertissement-section {
+    padding: 6rem 0;
+    text-align: center;
 }
 
-.social-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.intro-p {
+    color: var(--gris-fonce);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.divertissement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
 }
 
-.social-buttons a {
-    text-decoration: none;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: 600;
+.divertissement-item {
+    background-color: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gris-claire);
+}
+
+.divertissement-item:hover {
+    background-color: var(--violet-doux);
+    transform: scale(1.03);
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background-color: var(--gris-tres-clair);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    transition: opacity 0.3s, transform 0.2s;
+    transition: all 0.3s ease;
 }
 
-.social-buttons a:hover {
-    opacity: 0.9;
-    transform: scale(1.02);
+.icon-box i {
+    font-size: 2rem;
+    color: var(--violet-doux);
 }
 
-.btn-wa { background-color: #25D366; }
-.btn-tg { background-color: #0088cc; }
+.divertissement-item:hover .icon-box {
+    background-color: white;
+}
 
-/* Adaptation mobile */
+.divertissement-item:hover .icon-box i {
+    color: var(--violet-doux);
+}
+
+.divertissement-item h3 {
+    margin-bottom: 1rem;
+    color: var(--violet-doux);
+    transition: color 0.3s ease;
+}
+
+.divertissement-item p {
+    color: var(--gris-fonce);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Changement de couleur au survol pour le texte */
+.divertissement-item:hover h3,
+.divertissement-item:hover p {
+    color: white;
+}
+
+/* Rappel du style de titre h2 */
+.divertissement-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+/* =========================================
+   STYLE PAGE CONTACT (Destin)
+   ========================================= */
+
+.contact-section {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+/* Conteneur qui sépare les infos du formulaire */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+    text-align: left;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.contact-info h3 {
+    color: var(--violet-doux);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* Style des lignes d'informations (WhatsApp, Telegram, etc.) */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--violet-doux);
+    background-color: var(--gris-tres-clair);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.info-item p a {
+    text-decoration: none;
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Effets au survol des réseaux sociaux */
+.info-item:hover i.fa-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.info-item:hover i.fa-telegram {
+    background-color: #0088cc;
+    color: white;
+}
+
+.info-item p a:hover {
+    color: var(--violet-doux);
+    text-decoration: underline;
+}
+
+/* Style du Formulaire de Contact */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid var(--gris-claire);
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--violet-doux);
+}
+
+/* Bouton Envoyer */
+.btn-submit {
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 50px; /* Forme arrondie cohérente avec ton bouton Hero */
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-fronce);
+    transform: translateY(-3px);
+}
+
+/* Ligne sous le titre h2 pour rester cohérent avec l'accueil */
+.contact-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+
+/* Responsive pour mobiles */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
+    .contact-wrapper {
+        padding: 2rem;
+        margin: 2rem 1rem;
     }
 }
+/* =========================================
+   STYLE PAGE PROJETS (Maquette)
+   ========================================= */
+
+/* Conteneur pour limiter la largeur et centrer */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.projets-section {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+/* Grille qui s'adapte automatiquement (3 colonnes sur PC, 1 sur Mobile) */
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+/* Style de chaque carte de projet */
+.projet-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden; /* Pour que l'image suive l'arrondi des bords */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.projet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* L'image du projet */
+.projet-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Pour ne pas déformer l'image */
+    border-bottom: 1px solid var(--gris-claire);
+}
+
+/* Infos sous l'image */
+.projet-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.projet-info h3 {
+    color: var(--violet-doux);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.projet-info p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+/* Tags des technologies (HTML, CSS, etc.) */
+.projet-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.projet-tags span {
+    background-color: var(--gris-tres-clair);
+    color: var(--violet-doux);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid var(--gris-claire);
+}
+
+/* Liens Code et Démo en bas de carte */
+.projet-links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gris-claire);
+}
+
+.projet-links a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+    font-size: 0.9rem;
